@@ -2,13 +2,41 @@
 <html>
 <head>
   <title>Outboard</title>
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+  <![endif]-->
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
 </head>
 <body>
 
-<%= yield %>
+<div class="navbar navbar-fixed-top">
+
+  <div class="navbar-inner">
+  <a class="brand" href="/">Outboard.io</a>	  
+    <div class="container">
+      <ul class="nav">
+				<li class="active">
+					<li><a href="/recommendations/new">Add</a></li>
+				</li>
+				<li><a href="/users">Users</a></li>
+				<li class="divider-vertical"></li>
+				<li><a href="/settings">Settings</a></li>
+			</ul>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid">
+  <div class="row-fluid">
+
+      <%= yield %>
+
+  </div>
+</div>
 
 </body>
 </html>
