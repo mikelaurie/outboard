@@ -37,6 +37,11 @@ describe "StaticPages" do
  	 	end
   end
   
-
+  describe "Contact" do
+  	it "should have the content 'Contact'" do
+  		visit '/static_pages/contact'
+  		page.should have_selector('title', :text => 'Outboard - An app for making and taking recommendations | Contact')
+  	end
+  end
   
 end
