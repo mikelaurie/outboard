@@ -30,3 +30,12 @@ RSpec.configure do |config|
   # rspec-rails.
   config.infer_base_class_for_anonymous_controllers = false
 end
+
+def full_title(page_title)
+  base_title = "Outboard - An app for making and taking recommendations"
+  if page_title.empty?
+    base_title
+  else
+    "#{base_title} | #{page_title}"
+  end
+end
